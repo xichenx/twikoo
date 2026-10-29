@@ -1,3 +1,10 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "api/index" }]
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "api/index"
+    }
+  ],
+  "installCommand": "npm install --workspaces=false --package-lock=false",
+  "buildCommand": "npm install --workspaces=false --package-lock=false && node -e \"console.log(require.resolve('twikoo-vercel'))\""
 }
